@@ -51,9 +51,22 @@ mkdir /home/$USER/.bin
 echo 'export PATH="/home/$USER/.bin:$PATH' >> /home/$USER/.bashrc
 
 echo 'Getting latest sysupdate from github'
-git clone https://github.com/TheMetrologist/MiscPureBASH /home/$USER/Documents
+git clone https://github.com/TheMetrologist/MiscPureBASH /home/$USER/BraineCode/MiscPureBASH
 cp /home/$USER/Documents/sysupdate /home/$USER/.bin
 chmod -R 755 /home/$USER/.bin/
+
+echo 'Getting latest BraineCode from github
+git clone https://github.com/usnistgov/LEMASdistPub /home/$USER/BraineCode/LEMAS/LEMASdistPub
+git clone https://github.com/usnistgov/LEMASdist /home/$USER/BraineCode/LEMAS/LEMASdist
+git clone https://github.com/usnistgov/LEMASmaster /home/$USER/BraineCode/LEMAS/LEMASmaster
+git clone https://github.com/usnistgov/fringefinder /home/$USER/BraineCode/StrangProjects/fringefinder_python
+git clone https://github.com/usnistgov/fringefinder_matlab /home/$USER/BraineCode/StrangProjects/fringefinder_matlab
+git clone https://github.com/usnistgov/NISTCMMGrid /home/$USER/BraineCode/NISTCMMGrid
+git clone https://github.com/usnistgov/BasicTempLog /home/$USER/BraineCode/BasicTempLog
+git clone https://github.com/TheMetrologist/MiscPureMatlab /home/$USER/BraineCode/MiscPureMatlab
+git clone https://github.com/TheMetrologist/LaTeXdocs /home/$USER/BraineCode/LaTeXdocs
+git clone https://github.com/TheMetrologist/MahrProjects /home/$USER/BraineCode/MahrProjects
+
 
 echo 'Cleaning up unwanted folders'
 sudo rm -r /home/$USER/Music /home/$USER/Public /home/$USER/Templates /home/$USER/Videos
