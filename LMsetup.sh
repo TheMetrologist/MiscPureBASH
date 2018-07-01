@@ -46,6 +46,14 @@ wget https://atom.io/download/deb -O /tmp/atom.deb
 sudo dpkg -i /tmp/atom.deb
 rm /tmp/atom.deb
 
+echo 'Appending /home/$USER/bin to path'
+mkdir /home/$USER/bin
+echo 'export PATH="/home/$USER/bin:$PATH' >> /home/$USER/.bashrc
+
+echo 'Getting latest sysupdate from github'
+wget https://github.com/TheMetrologist/MiscPureBASH/blob/master/LMsetup.sh -O /home/$USER/bin/sysupdate
+chmod -R 755 /home/$USER/bin/
+
 echo 'Installing gitkraken'
 sudo apt install libgnome-keyring0 -y
 wget https://release.gitkraken.com/linux/gitkraken-amd64.deb -O /tmp/gitkraken.deb
