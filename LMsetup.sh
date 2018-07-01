@@ -56,4 +56,16 @@ rm /tmp/AnacondaPython.sh
 echo 'Installing LaTeX'
 sudo apt install texlive-full -y
 
+echo 'Installing Google Authenticator'
+sudo apt install libpam-google-authenticator -y
+sudo apt install wget make gcc libpam0g-dev
+wget https://google-authenticator.googlecode.com/files/libpam-google-authenticator-1.0-source.tar.bz2
+tar -xvf libpam-googleauthenticator-1.0-source.tar.bz2
+cd libpam-google-authenticator-1.0/
+make
+make install
+google-authenticator
+echo 'auth	required	pam_google_authenticator.so' >> /etc/pam.d/sshd
+sed -i -e 's/ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/g' /etc/ssh/sshd_config
+service ssh restart
 
