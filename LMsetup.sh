@@ -47,12 +47,13 @@ sudo dpkg -i /tmp/atom.deb
 rm /tmp/atom.deb
 
 echo 'Appending /home/$USER/bin to path'
-mkdir /home/$USER/bin
-echo 'export PATH="/home/$USER/bin:$PATH' >> /home/$USER/.bashrc
+mkdir /home/$USER/.bin
+echo 'export PATH="/home/$USER/.bin:$PATH' >> /home/$USER/.bashrc
 
 echo 'Getting latest sysupdate from github'
-wget https://github.com/TheMetrologist/MiscPureBASH/blob/master/LMsetup.sh -O /home/$USER/bin/sysupdate
-chmod -R 755 /home/$USER/bin/
+git clone https://github.com/TheMetrologist/MiscPureBASH /home/$USER/Documents
+cp /home/$USER/Documents/sysupdate /home/$USER/.bin
+chmod -R 755 /home/$USER/.bin/
 
 echo 'Cleaning up unwanted folders'
 sudo rm -r /home/$USER/Music /home/$USER/Public /home/$USER/Templates /home/$USER/Videos
