@@ -54,6 +54,9 @@ echo 'Getting latest sysupdate from github'
 wget https://github.com/TheMetrologist/MiscPureBASH/blob/master/LMsetup.sh -O /home/$USER/bin/sysupdate
 chmod -R 755 /home/$USER/bin/
 
+echo 'Cleaning up unwanted folders'
+sudo rm -r /home/$USER/Music /home/$USER/Public /home/$USER/Templates /home/$USER/Videos
+
 echo 'Installing gitkraken'
 sudo apt install libgnome-keyring0 -y
 wget https://release.gitkraken.com/linux/gitkraken-amd64.deb -O /tmp/gitkraken.deb
