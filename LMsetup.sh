@@ -69,7 +69,7 @@ apm install minimap-bookmarks
 
 echo 'setting pylint warning disables'
 echo '[MESSAGES CONTROL]' >> /home/$USER/.pylintrc
-echo 'disable=line-too-long' >> /home/$USER/.pylintrc
+echo 'disable=line-too-long, invalid-name' >> /home/$USER/.pylintrc
 
 echo 'Appending /home/$USER/bin to path'
 mkdir /home/$USER/.bin
