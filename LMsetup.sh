@@ -58,7 +58,7 @@ apm install linter
 apm install linter-pylint
 apm install hydrogen
 apm install todo-show
-apm install language latex
+apm install language-latex
 apm install autocomplete-python
 apm install highlight-selected
 apm install minimap
