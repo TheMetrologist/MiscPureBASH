@@ -103,7 +103,7 @@ rm /tmp/gitkraken.deb
 
 echo 'Installing AnacondaPython'
 wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh -O /tmp/AnacondaPython.sh
-sudo bash /tmp/AnacondaPython.sh
+bash /tmp/AnacondaPython.sh
 rm /tmp/AnacondaPython.sh
 
 echo 'Installing LaTeX'
