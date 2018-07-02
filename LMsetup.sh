@@ -41,14 +41,39 @@ sudo apt install htop -y
 echo 'Installing GIMP'
 sudo apt install gimp -y
 
+echo 'Installing ranger'
+sudo apt install ranger -y
+
 echo 'Installing atom'
 wget https://atom.io/download/deb -O /tmp/atom.deb
 sudo dpkg -i /tmp/atom.deb
 rm /tmp/atom.deb
 
+echo 'Installing atom packages through apm'
+apm install file-icons
+apm install intentions
+apm install busy-signal
+apm install linter-ui-default
+apm install linter
+apm install linter-pylint
+apm install hydrogen
+apm install todo-show
+apm install language latex
+apm install autocomplete-python
+apm install highlight-selected
+apm install minimap
+apm install minimap-cursorline
+apm install minimap-linter
+apm install minimap-highlight-selected
+apm install minimap-bookmarks
+
+echo 'setting pylint warning disables'
+echo '[MESSAGES CONTROL]' >> /home/$USER/.pylintrc
+echo 'disable=line-too-long' >> /home/$USER/.pylintrc
+
 echo 'Appending /home/$USER/bin to path'
 mkdir /home/$USER/.bin
-echo 'export PATH="/home/$USER/.bin:$PATH' >> /home/$USER/.bashrc
+echo 'export PATH="/home/$USER/.bin:$PATH"' >> /home/$USER/.bashrc
 
 echo 'Getting latest sysupdate from github'
 git clone https://github.com/TheMetrologist/MiscPureBASH /home/$USER/BraineCode/MiscPureBASH
