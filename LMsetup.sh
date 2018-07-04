@@ -71,15 +71,6 @@ echo 'setting pylint warning disables'
 echo '[MESSAGES CONTROL]' >> /home/$USER/.pylintrc
 echo 'disable=line-too-long, invalid-name' >> /home/$USER/.pylintrc
 
-echo 'Appending /home/$USER/bin to path'
-mkdir /home/$USER/.bin
-echo 'export PATH="/home/$USER/.bin:$PATH"' >> /home/$USER/.bashrc
-
-echo 'Getting latest sysupdate from github'
-git clone https://github.com/TheMetrologist/MiscPureBASH /home/$USER/BraineCode/MiscPureBASH
-cp /home/$USER/Documents/sysupdate /home/$USER/.bin
-chmod -R 755 /home/$USER/.bin/
-
 echo 'Getting latest BraineCode from github'
 git clone https://github.com/usnistgov/LEMASdistPub        /home/$USER/BraineCode/LEMAS/LEMASdistPub
 git clone https://github.com/usnistgov/LEMASdist           /home/$USER/BraineCode/LEMAS/LEMASdist
@@ -88,9 +79,22 @@ git clone https://github.com/usnistgov/fringefinder        /home/$USER/BraineCod
 git clone https://github.com/usnistgov/fringefinder_matlab /home/$USER/BraineCode/StrangProjects/fringefinder_matlab
 git clone https://github.com/usnistgov/NISTCMMGrid         /home/$USER/BraineCode/NISTCMMGrid
 git clone https://github.com/usnistgov/BasicTempLog        /home/$USER/BraineCode/BasicTempLog
+git clone https://github.com/TheMetrologist/MiscPureBASH   /home/$USER/BraineCode/MiscPureBASH
 git clone https://github.com/TheMetrologist/MiscPureMatlab /home/$USER/BraineCode/MiscPureMatlab
 git clone https://github.com/TheMetrologist/LaTeXdocs      /home/$USER/BraineCode/LaTeXdocs
 git clone https://github.com/TheMetrologist/MahrProjects   /home/$USER/BraineCode/MahrProjects
+git clone https://github.com/TheMetrologist/BraineCodePull /home/$USER/BraineCode/BraineCodePull
+
+echo 'Creating and appending /home/$USER/bin to path'
+mkdir /home/$USER/.bin
+mkdir /home/$USER/.bin/binhelpers
+echo 'export PATH="/home/$USER/.bin:$PATH"' >> /home/$USER/.bashrc
+
+echo 'Installing latest bin scripts from github'
+cp /home/$USER/BraineCode/MiscPureBASH/sysupdate /home/$USER/.bin
+cp /home/$USER/BraineCode/BraineCodePull/gitpullall /home/$USER/.bin
+cp /home/$USER/BraineCode/BraineCodePull/subdirfind.py /home/$USER/.bin/binhelpers
+chmod 755 /home/$USER/.bin/*
 
 echo 'Cleaning up unwanted folders'
 sudo rm -r /home/$USER/Music /home/$USER/Public /home/$USER/Templates /home/$USER/Videos
