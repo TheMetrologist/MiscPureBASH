@@ -57,6 +57,7 @@ apm install linter-ui-default
 apm install linter
 apm install linter-pylint
 apm install hydrogen
+apm install hydrogen-python
 apm install todo-show
 apm install language-latex
 apm install autocomplete-python
