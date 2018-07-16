@@ -5,6 +5,7 @@
 echo 'Enabling UFW'
 sudo ufw enable
 sudo ufw allow ssh
+sudo ufw allow 32400 #port used by plex
 
 echo 'Cleaning up unwanted software'
 sudo apt purge pix -y
@@ -43,6 +44,11 @@ sudo apt install gimp -y
 
 echo 'Installing ranger'
 sudo apt install ranger -y
+
+echo 'Installing Plex media server'
+wget https://downloads.plex.tv/plex-media-server/1.13.2.5154-fd05be322/plexmediaserver_1.13.2.5154-fd05be322_amd64.deb -O /tmp/plex.deb
+sudo dpkg -i /tmp/plex.deb
+rm /tmp/plex.deb
 
 echo 'Installing atom'
 wget https://atom.io/download/deb -O /tmp/atom.deb
