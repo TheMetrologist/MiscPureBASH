@@ -45,6 +45,9 @@ sudo apt install gimp -y
 echo 'Installing ranger'
 sudo apt install ranger -y
 
+echo 'Installing screenfetch'
+sudo apt install screenfetch -y
+
 echo 'Installing Plex media server'
 wget https://downloads.plex.tv/plex-media-server/1.13.2.5154-fd05be322/plexmediaserver_1.13.2.5154-fd05be322_amd64.deb -O /tmp/plex.deb
 sudo dpkg -i /tmp/plex.deb
