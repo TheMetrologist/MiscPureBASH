@@ -68,7 +68,10 @@ apm install linter-pylint
 apm install hydrogen
 apm install hydrogen-python
 apm install todo-show
+apm install pdf-view
 apm install language-latex
+apm install latex-tree
+apm install linter-latex
 apm install autocomplete-python
 apm install highlight-selected
 apm install minimap
@@ -76,6 +79,8 @@ apm install minimap-cursorline
 apm install minimap-linter
 apm install minimap-highlight-selected
 apm install minimap-bookmarks
+apm install pigments
+apm install color-picker
 
 echo 'setting pylint warning disables'
 echo '[MESSAGES CONTROL]' >> /home/$USER/.pylintrc
