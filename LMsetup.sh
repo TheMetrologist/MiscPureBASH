@@ -105,6 +105,9 @@ mkdir /home/$USER/.bin
 mkdir /home/$USER/.bin/binhelpers
 echo 'export PATH="/home/$USER/.bin:$PATH"' >> /home/$USER/.bashrc
 
+echo 'Adding extension colors to /home/$USER/.bashrc'
+echo 'export LS_COLORS=$LS_COLORS:"*.strangdata=1;31;47"'
+
 echo 'Installing latest bin scripts from github'
 cp /home/$USER/BraineCode/MiscPureBASH/sysupdate /home/$USER/.bin
 cp /home/$USER/BraineCode/BraineCodePull/gitpullall /home/$USER/.bin
