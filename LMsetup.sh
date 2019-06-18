@@ -70,7 +70,7 @@ apm install hydrogen-python
 apm install todo-show
 apm install pdf-view
 apm install language-latex
-apm install latex-tree
+apm install latex
 apm install linter-latex
 apm install autocomplete-python
 apm install highlight-selected
@@ -80,6 +80,7 @@ apm install minimap-linter
 apm install minimap-highlight-selected
 apm install minimap-bookmarks
 apm install pigments
+apm install minimap-pigments
 apm install color-picker
 
 echo 'setting pylint warning disables'
