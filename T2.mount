@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo mount -t cifs -o username=braine,sec=ntlmssp //CFS2e.nist.gov/685/internal/G10 /mnt/T2
