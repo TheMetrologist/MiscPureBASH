@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo mount -t cifs -o username=braine,sec=ntlmssp //elwood.nist.gov/685/users/braine/My\ Documents /home/braine/MyDocuments
