@@ -1,0 +1,9 @@
+#!/bin/bash
+read -sp "Mounting password: " pass
+echo " "
+bash /home/braine/BraineCode/MiscPureBASH/elwood.nist.gov.mount $pass
+bash /home/braine/BraineCode/MiscPureBASH/T2.mount $pass
+bash /home/braine/BraineCode/MiscPureBASH/MyDocuments.mount $pass
+bash /home/braine/BraineCode/MiscPureBASH/StrangShared.mount $pass
+bash /home/braine/BraineCode/MiscPureBASH/HilgerFringefinder.mount $pass
+bash /home/braine/BraineCode/MiscPureBASH/HISTORYS.mount $pass

@@ -1,2 +1,2 @@
-#!/bin/bash
-sudo mount -t cifs -o username=braine,sec=ntlmssp //elwood.nist.gov/685/users/braine/My\ Documents /home/braine/MyDocuments
+#!/bin/sh
+sudo mount -t cifs -o username=braine,password=$1,sec=ntlmssp //elwood.nist.gov/685/users/braine/My\ Documents /home/braine/NetworkDrives/MyDocuments

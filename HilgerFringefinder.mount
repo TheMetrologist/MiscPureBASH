@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo mount -t cifs -o username=braine,password=$1,sec=ntlmssp //elwood.nist.gov/685/internal/proj/wire/WORK/braine/Pythonfringefinder /home/braine/NetworkDrives/HilgerFringefinder
